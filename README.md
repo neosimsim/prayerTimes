@@ -10,6 +10,15 @@
 ## Calculation
 The calculation methods are derived from [prayertimes.org](http://praytimes.org/calculation/).
 
+## Installation
+To build and install the program simply run
+```sh
+./bootstrap
+./configure
+make
+make install
+```
+
 ## License
 PrayerTimes is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
