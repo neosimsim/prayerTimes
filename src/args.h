@@ -15,15 +15,20 @@
  * along with prayerTimes. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "args.h"
+#ifndef PRAYER_TIMES_ARGS_H
+#define PRAYER_TIMES_ARGS_H
 
-int
-main (int argc, char **argv)
+#include <argp.h>
+
+struct arguments
 {
-  parse_args(argc, argv);
-  printf ("Bismillah al rahman al rahim.\n");
-  printf ("latitude %f, longitude %f.\n", arg_list.latitude, arg_list.longitude);
-  return EXIT_SUCCESS;
-}
+    float latitude;
+    float longitude;
+};
+
+struct arguments arg_list;
+
+void
+parse_args(int argc, char **argv);
+
+#endif /* PRAYER_TIMES_ARGS_H */
