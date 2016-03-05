@@ -18,6 +18,8 @@
 #ifndef PRAYER_TIMES_ARGS_H
 #define PRAYER_TIMES_ARGS_H
 
+#include <argp.h>
+
 void
 parse_args(int argc, char **argv);
 

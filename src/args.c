@@ -15,10 +15,12 @@
  * along with prayerTimes. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <argp.h>
+#include "args.h"
 
 void
 parse_args(int argc, char **argv)
 {
+  argp_program_version = VERSION;
+  argp_program_bug_address = PACKAGE_BUGREPORT;
   argp_parse(0, argc, argv, 0, 0, 0);
 }
