@@ -20,6 +20,14 @@
 
 #include <argp.h>
 
+struct arguments
+{
+    float latitude;
+    float longitude;
+};
+
+struct arguments arg_list;
+
 void
 parse_args(int argc, char **argv);
 

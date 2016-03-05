@@ -24,5 +24,6 @@ main (int argc, char **argv)
 {
   parse_args(argc, argv);
   printf ("Bismillah al rahman al rahim.\n");
+  printf ("latitude %f, longitude %f.\n", arg_list.latitude, arg_list.longitude);
   return EXIT_SUCCESS;
 }

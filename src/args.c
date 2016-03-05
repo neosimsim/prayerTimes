@@ -15,12 +15,44 @@
  * along with prayerTimes. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "args.h"
+
+static struct argp_option options[] = {
+  {"longitude", 'o', "LONGITUDE", 0, "Longitude of you location"},
+  {"latitude", 'l', "LATITUDE", 0, "Latitude of you location"},
+  {NULL}
+};
+
+static error_t
+parse(int key, char *arg, struct argp_state *state)
+{
+  struct arguments *args = state->input;
+  switch(key)
+    {
+    case 'l':
+      args->latitude = strtof(arg, NULL);
+      break;
+
+    case 'o':
+      args->longitude = strtof(arg, NULL);
+      break;
+
+    default:
+      return ARGP_ERR_UNKNOWN;
+    }
+  return 0;
+}
 
 void
 parse_args(int argc, char **argv)
 {
+  int doc_length = 100;
+  char *doc = malloc(doc_length);
+  snprintf(doc, doc_length, "%s is a programm to calculate the prayer times for locations specified by latitude and longitude.", PACKAGE_NAME);
+  struct argp argp = { options, parse, 0, doc};
   argp_program_version = VERSION;
   argp_program_bug_address = PACKAGE_BUGREPORT;
-  argp_parse(0, argc, argv, 0, 0, 0);
+  argp_parse(&argp, argc, argv, 0, 0, &arg_list);
 }
