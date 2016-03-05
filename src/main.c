@@ -22,6 +22,9 @@
 int
 main (int argc, char **argv)
 {
+  // Adding default location for Kaaba in Mecca.
+  arg_list.latitude = 21.422510f;
+  arg_list.longitude = 39.826295f;
   parse_args(argc, argv);
   printf ("Bismillah al rahman al rahim.\n");
   printf ("latitude %f, longitude %f.\n", arg_list.latitude, arg_list.longitude);
