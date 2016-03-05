@@ -15,14 +15,10 @@
  * along with prayerTimes. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "args.h"
+#ifndef PRAYER_TIMES_ARGS_H
+#define PRAYER_TIMES_ARGS_H
 
-int
-main (int argc, char **argv)
-{
-  parse_args(argc, argv);
-  printf ("Bismillah al rahman al rahim.\n");
-  return EXIT_SUCCESS;
-}
+void
+parse_args(int argc, char **argv);
+
+#endif /* PRAYER_TIMES_ARGS_H */
