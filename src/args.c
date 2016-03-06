@@ -55,4 +55,5 @@ parse_args(int argc, char **argv)
   argp_program_version = VERSION;
   argp_program_bug_address = PACKAGE_BUGREPORT;
   argp_parse(&argp, argc, argv, 0, 0, &arg_list);
+  free(doc);
 }
