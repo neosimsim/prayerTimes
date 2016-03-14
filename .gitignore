@@ -15,3 +15,4 @@ src/Makefile
 src/Makefile.in
 src/*.o
 src/prayertimes
+tags
