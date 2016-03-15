@@ -1,6 +1,6 @@
 INSTALL
-Makefile
-Makefile.in
+*Makefile
+*Makefile.in
 aclocal.m4
 autom4te.cache/
 compile
@@ -10,9 +10,15 @@ configure
 depcomp
 install-sh
 missing
+tags
+config.guess
+config.sub
+libtool
+ltmain.sh
+m4/
 src/.deps/
-src/Makefile
-src/Makefile.in
 src/*.o
 src/prayertimes
-tags
+src/.libs/
+src/*.lo
+src/*.la
