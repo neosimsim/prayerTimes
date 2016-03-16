@@ -11,6 +11,8 @@ AC_PROG_YACC
 
 LT_INIT
 
+PKG_CHECK_MODULES([CHECK], [check >= 0.10.0])
+
 AC_ARG_ENABLE(debug,
 AS_HELP_STRING([--enable-debug],
                [enable debugging, default: no]),
