@@ -22,3 +22,10 @@ src/prayertimes
 src/.libs/
 src/*.lo
 src/*.la
+test-driver
+tests/.deps/
+tests/check_astro
+tests/check_astro.log
+tests/check_astro.o
+tests/check_astro.trs
+tests/test-suite.log
