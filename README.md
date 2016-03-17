@@ -19,6 +19,12 @@ make
 make install
 ```
 
+## Testing
+To run all checks/unit tests run
+```sh
+make check
+```
+
 ## License
 PrayerTimes is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
