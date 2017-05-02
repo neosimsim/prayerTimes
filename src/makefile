@@ -13,5 +13,12 @@ ${TARG}: ${OFILES}
 .c.o:
 	${CC} ${CFLAGS} -o $@ $<
 
+install:
+	@mkdir -p ${PREFIX}/bin
+	cp ${TARG} ${PREFIX}/bin
+
+uninstall:
+	cd ${PREFIX}/bin && rm -r ${TARG}
+
 clean:
 	rm -f ${OFILES} ${TARG}
