@@ -17,7 +17,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <argp.h>
 #include "args.h"
+
 
 #define PACKAGE_NAME "prtimes"
 #define PACKAGE_BUGREPORT "neosimsim@posteo.de"
@@ -31,7 +33,7 @@ static struct argp_option options[] = {
 static error_t
 parse(int key, char *arg, struct argp_state *state)
 {
-  struct arguments *args = state->input;
+  arguments *args = state->input;
   switch(key)
     {
     case 'l':

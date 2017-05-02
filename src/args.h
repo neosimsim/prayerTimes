@@ -18,15 +18,13 @@
 #ifndef PRAYER_TIMES_ARGS_H
 #define PRAYER_TIMES_ARGS_H
 
-#include <argp.h>
-
-struct arguments
+typedef struct
 {
     float latitude;
     float longitude;
-};
+} arguments;
 
-struct arguments arg_list;
+arguments arg_list;
 
 void
 parse_args(int argc, char **argv);
