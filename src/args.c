@@ -19,6 +19,9 @@
 #include <stdlib.h>
 #include "args.h"
 
+#define PACKAGE_NAME "prtimes"
+#define PACKAGE_BUGREPORT "neosimsim@posteo.de"
+
 static struct argp_option options[] = {
   {"longitude", 'o', "LONGITUDE", 0, "Longitude of your location: Default Kaaba in Mecca"},
   {"latitude", 'l', "LATITUDE", 0, "Latitude of your location: Default Kaaba in Mecca"},
