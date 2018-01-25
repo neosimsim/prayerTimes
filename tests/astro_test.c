@@ -19,10 +19,12 @@
 
 #include <check.h>
 #include <stdlib.h>
-#include "../src/astro.c"
+#include "../src/astro.h"
 
 START_TEST(test_astro_julian_date)
 {
+	double v = julian_date(0);
+	ck_assert_double_eq(v, 2);
 }
 END_TEST
 
